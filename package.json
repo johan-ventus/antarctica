@@ -1,0 +1,23 @@
+{
+  "name": "antarctica",
+  "version": "1.0.0",
+  "description": "The Best Automated Test In A Galaxy Far Far Away...",
+  "main": "index.js",
+  "scripts": {
+    "test": "starwars"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johan-ventus/antarctica.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johan-ventus/antarctica/issues"
+  },
+  "homepage": "https://github.com/johan-ventus/antarctica#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "testcafe": "^1.9.4"
+  }
+}
