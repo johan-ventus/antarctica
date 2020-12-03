@@ -38,3 +38,20 @@ export const postButton = (): Selector => {
 export const sentPost = (value: string): Selector => {
     return Selector('p').withAttribute('data-tip','true').withText('a few seconds ago')
 }
+
+export const openNotificationBar = (): Selector => {
+    //return Selector('div').withAttribute('data-testid','notifications-icon').child('button')
+    return Selector('div').withAttribute('data-component-name','Notifications').child('button')
+}
+
+export const notificationSentBy3CPO = (): Selector => {
+    return Selector('p').withAttribute('data-testid','timestamp').withText('a few seconds ago')
+}
+
+export const notificationValidated = (): Selector => {
+    return Selector('p').withAttribute('data-for').withText('a few seconds ago')
+}
+
+export const validatePostContent = (): Selector => {
+    return Selector('a').withAttribute('class','mention').withAttribute('data-user-id').parent('p')
+}
