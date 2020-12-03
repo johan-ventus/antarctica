@@ -18,6 +18,7 @@
   "homepage": "https://github.com/johan-ventus/antarctica#readme",
   "dependencies": {},
   "devDependencies": {
+    "faker": "^5.1.0",
     "testcafe": "^1.9.4"
   }
 }

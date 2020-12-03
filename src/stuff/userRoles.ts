@@ -1,3 +1,4 @@
+import { ok } from 'assert'
 import {  t, Selector, Role } from 'testcafe'
 
 const loginDetails = require('../../credentials.json')
@@ -9,6 +10,7 @@ export const flamboyant_robot  = Role(loginDetails.url, async t => {
         .click('#identifierNext')
         .typeText(Selector('input').withAttribute('type','password'), loginDetails._3cpo_password)
         .click('#passwordNext')
+        .expect(Selector('html', { timeout : 30000 }).withAttribute('ng-app','app').visible).ok()
 })
 
 export const xwing_buddy = Role(loginDetails.url, async t => {
@@ -18,4 +20,5 @@ export const xwing_buddy = Role(loginDetails.url, async t => {
         .click('#identifierNext')
         .typeText(Selector('input').withAttribute('type','password'), loginDetails.r2d2_password)
         .click('#passwordNext')
+        .expect(Selector('html', { timeout : 30000 }).withAttribute('ng-app','app').visible).ok()
 })
