@@ -2,56 +2,19 @@ import { Selector } from 'testcafe'
 
 const loginDetails = require('../../credentials.json')
 
-export const faunaUrl = (): string => {
-    //return `${loginDetails.url}/channels/19038209/FaunaInAntarctica`
-    return 'https://staging.unvrs.io/channels/19038209/FaunaInAntarctica'
-}
-
-export const postEditField = (): Selector => {
-    return Selector('div').withAttribute('contenteditable','true')
-}
-
-export const userSuggestion = (): Selector => {
-    return Selector('div').withAttribute('class','user-mention__name')
-}
-
-export const gifButton = (): Selector => {
-    return Selector('button').withAttribute('aria-label','GIF')
-}
-
 export const selectHashtag = (hashtag: string): Selector => {
-    return Selector('p', { timeout : 5000 }).withText('#automation_'+hashtag)
-}
-
-export const searchGIF = (): Selector => {
-    return Selector('input', { timeout : 3000 }).withAttribute('aria-label','Search')
-}
-
-export const selectGIFImage = (): Selector => {
-    return Selector('div', { timeout : 3000 }).withAttribute('data-testid','giphy-wrapper').child('div').child('a').nth(1)
-}
-
-export const postButton = (): Selector => {
-    return Selector('button').withAttribute('aria-label','Post')
-}
-
-export const sentPost = (value: string): Selector => {
-    return Selector('p').withAttribute('data-tip','true').withText('a few seconds ago')
-}
-
-export const openNotificationBar = (): Selector => {
-    //return Selector('div').withAttribute('data-testid','notifications-icon').child('button')
-    return Selector('div').withAttribute('data-component-name','Notifications').child('button')
+    return Selector('p', { timeout : 5000 }).withText('#'+hashtag)
 }
 
 export const notificationSentBy3CPO = (): Selector => {
     return Selector('p').withAttribute('data-testid','timestamp').withText('a few seconds ago')
-}
 
-export const notificationValidated = (): Selector => {
-    return Selector('p').withAttribute('data-for').withText('a few seconds ago')
 }
 
 export const validatePostContent = (): Selector => {
     return Selector('a').withAttribute('class','mention').withAttribute('data-user-id').parent('p')
+}
+
+export const openEmailFrom3CPO = (email: string): Selector => {
+    return Selector('b').withText(email)
 }
