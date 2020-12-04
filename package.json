@@ -4,7 +4,7 @@
   "description": "The Best Automated Test In A Galaxy Far Far Away...",
   "main": "index.js",
   "scripts": {
-    "test": "starwars"
+    "test": ""
   },
   "repository": {
     "type": "git",
